@@ -224,13 +224,14 @@
               }
 
               .logo-track {
-                  display: flex;
-                  overflow: hidden;
-                  padding: 5px;
-                  width: 100%;
-                  position: relative;
-                  mask: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
-                  -webkit-mask: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+                display: flex;
+                width: max-content;
+                height: 100px;
+                animation: scroll 25s linear infinite;
+                gap: clamp(20px, 4vw, 60px);
+                align-items: center;
+                mask: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+                -webkit-mask: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
               }
 
               .logo-slide {
@@ -294,7 +295,7 @@
                       transform: translateX(0);
                   }
                   100% {
-                      transform: translateX(-100%);
+                      transform: translateX(-50%);
                   }
               }
 
