@@ -615,8 +615,7 @@
             100% { opacity: 0; transform: translateY(-100%); }
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
+       @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 gap: 10px;
@@ -624,6 +623,7 @@
 
             .hero {
                 padding-top: 60px;
+                padding-bottom:20px;
                 padding-bottom: 20px;
             }
 
@@ -641,41 +641,6 @@
                 width: 100%;
             }
 
-            .section-title {
-                font-size: 1.8rem;
-                margin-bottom: 40px;
-              }
-                
-              .hero-content {
-                padding-top: 70px;
-              }
-            
-              .project-card {
-                padding: 20px;
-              }
-            
-              .project-title {
-                font-size: 18px;
-              }
-            
-              .project-description {
-                font-size: 14px;
-              }
-            
-              .project-year {
-                font-size: 12px;
-              }
-            
-              .projects {
-                padding: 40px 20px;
-              }
-            
-              .about-me,
-              .skills,
-              .social-bar {
-                padding: 40px 20px;
-              }
-
             .project-card {
                 padding: 30px 20px;
             }
@@ -688,12 +653,12 @@
                 gap: 15px;
                 padding: 15px;
             }
-            
+
             .social-item {
                 width: 50px;
                 height: 50px;
             }
-            
+
             .social-item svg {
                 width: 30px;
                 height: 30px;
@@ -709,6 +674,7 @@
         /* Responsive design */
         @media (max-width: 480px) {
             .hero {
+                padding-top: 100px;
                 padding-top: 60px;
                 padding-bottom: 20px;
             }
@@ -718,48 +684,88 @@
                 width: 100%;
             }
 
-            .section-title {
-                font-size: 1.5rem;
-                margin-bottom: 30px;
-           }
-        
-           .project-title {
-               font-size: 16px;
-           }
-        
-           .project-description {
-               font-size: 13px;
-           }
-        
-           .project-year {
-              font-size: 11px;
-           }
-        
-           .project-card {
-              padding: 15px;
-           }
-        
-           .projects,
-           .about-me,
-           .skills,
-           .social-bar {
-              padding: 30px 15px;
-           }
+            .social-bar {
+                gap: 15px;
+                padding: 15px;
+            }
 
-           .social-bar {
-              gap: 15px;
-              padding: 15px;
-           }
-            
-           .social-item {
-              width: 50px;
-              height: 50px;
-           }
-            
-           .social-item svg {
-              width: 30px;
-              height: 30px;
-           }
+            .social-item {
+                width: 50px;
+                height: 50px;
+            }
+
+            .social-item svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+          .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+          }
+        
+          .hero-content {
+            padding-top: 70px;
+          }
+        
+          .project-card {
+            padding: 20px;
+          }
+        
+          .project-title {
+            font-size: 18px;
+          }
+        
+          .project-description {
+            font-size: 14px;
+          }
+        
+          .project-year {
+            font-size: 12px;
+          }
+        
+          .projects {
+            padding: 40px 20px;
+          }
+        
+          .about-me,
+          .skills,
+          .social-bar {
+            padding: 40px 20px;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+          }
+        
+          .project-title {
+            font-size: 16px;
+          }
+        
+          .project-description {
+            font-size: 13px;
+          }
+        
+          .project-year {
+            font-size: 11px;
+          }
+        
+          .project-card {
+            padding: 15px;
+          }
+        
+          .projects,
+          .about-me,
+          .skills,
+          .social-bar {
+            padding: 30px 15px;
+          }
         }
 
 
