@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Athul Nath M - Explore My Portfolio</title>
+    <title>athulnath03</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link rel="icon" href="https://framerusercontent.com/images/Rf5heNKmceEvmxMO7H94G2amnzc.png?scale-down-to=1024" type="image/png"/>
@@ -58,33 +58,6 @@
           align-items: center;
       }
 
-      .work-status {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 14px;
-          color: #888;
-      }
-
-      .status-dot {
-          width: 8px;
-          height: 8px;
-          background: #00ff88;
-          border-radius: 50%;
-          animation: pulse 2s infinite;
-      }
-
-      @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.5; }
-      }
-
-      .local-time {
-          font-family: 'Courier New', monospace;
-          color: #00ff88;
-          font-weight: bold;
-      }
-
       /* -----------------------------------------------------Hero Section----------------------------------------------------- */
       .hero {
           min-height: 100vh;
@@ -110,7 +83,7 @@
           border: 3px solid #00ff88;
           overflow: hidden;
           position: relative;
-          animation: float 3s ease-in-out infinite;
+/*           animation: float 3s ease-in-out infinite; */
       }
 
       .profile-image img {
@@ -119,10 +92,10 @@
           object-fit: cover;
       }
 
-      @keyframes float {
+/*       @keyframes float {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-10px); }
-      }
+      } */
 
       .greeting {
           font-size: 18px;
@@ -448,6 +421,67 @@
           font-size: 14px;
       }
 
+      .custom-skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            padding-top: 30px;
+          }
+
+          .skill-card {
+            width: 250px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            cursor: default;
+            transition: transform 0.3s ease, background 0.5s ease,
+              border-color 0.5s ease;
+          }
+
+          .skill-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+            z-index: 1;
+          }
+
+          .skill-card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #00ff88;
+          }
+
+          .skill-card:hover::before {
+            left: 100%;
+          }
+
+          .skill-text {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+          }
+
+          .skill-card:hover .skill-text {
+            color: #00ff88;
+            transform: scale(1.1);
+          }
+
       /* -----------------------------------------------------Footer----------------------------------------------------- */
       .footer {
           padding: 60px 0;
@@ -730,7 +764,7 @@
         .about-me,
         .skills,
         .social-bar {
-          padding: 40px 20px;
+          padding: 25px;
         }
       }
 
@@ -781,10 +815,6 @@
           <div class="work-status">
             <span class="status-dot"></span>
             <span>Available For Work</span>
-          </div>
-          <div class="work-status">
-            <span>Local Time ( IST )</span>
-            <span class="local-time" id="local-time">16:42:34</span>
           </div>
         </div>
       </div>
@@ -957,13 +987,7 @@
           <h2 class="section-title fade-in">About Me</h2>
           <div class="intro">
             <p class="description">
-              A passionate Software Developer with a creative edge in UI/UX
-              design and a strong foundation in full-stack development. I enjoy
-              building smart, user-friendly digital solutions—from interactive
-              web apps to innovative projects like augmented reality tools. With
-              hands-on experience in both startup and tech-driven environments,
-              I bring adaptability, attention to detail, and a constant drive to
-              learn and grow.
+              A passionate Software Developer with a creative edge in UI/UX design and a strong foundation in full-stack development. I enjoy building smart, user-friendly digital solutions—from interactive web apps to innovative projects like augmented reality tools. With hands-on experience in both startup and tech-driven environments, I bring adaptability, attention to detail, and a constant drive to learn and grow.
             </p>
           </div>
         </div>
@@ -987,11 +1011,7 @@
                 <div class="project-year">2024</div>
               </div>
               <p class="project-description">
-                A system that automates schedule creation for schools and
-                colleges, reducing manual effort and improving efficiency by
-                handling constraints like faculty availability and room
-                capacity. It streamlines academic planning and minimizes
-                conflicts for administrators, faculty, and students.
+                A system that automates schedule creation for schools and colleges, reducing manual effort and improving efficiency by handling constraints like faculty availability and room capacity. It streamlines academic planning and minimizes conflicts for administrators, faculty, and students.
               </p>
             </div>
             <!--project 2-->
@@ -1007,10 +1027,7 @@
                 <div class="project-year">2024</div>
               </div>
               <p class="project-description">
-                An interactive system that merges physical gestures with digital
-                whiteboarding using real-time hand tracking, computer vision,
-                and AR. Enables immersive learning and collaboration for
-                classrooms, remote teams, and creative professionals.
+                An interactive system that merges physical gestures with digital whiteboarding using real-time hand tracking, computer vision, and AR. Enables immersive learning and collaboration for classrooms, remote teams, and creative professionals.
               </p>
             </div>
             <!--project 1-->
@@ -1028,11 +1045,7 @@
                 <div class="project-year">2023</div>
               </div>
               <p class="project-description">
-                A system that automates schedule creation for schools and
-                colleges, reducing manual effort and improving efficiency by
-                handling constraints like faculty availability and room
-                capacity. It streamlines academic planning and minimizes
-                conflicts for administrators, faculty, and students.
+                A system that automates schedule creation for schools and colleges, reducing manual effort and improving efficiency by handling constraints like faculty availability and room capacity. It streamlines academic planning and minimizes conflicts for administrators, faculty, and students.
               </p>
             </div>
           </div>
@@ -1047,83 +1060,16 @@
             <div class="skill-card">
               <div class="skill-text">JavaScript</div>
             </div>
-            <div class="skill-card"><div class="skill-text">React</div></div>
-            <div class="skill-card"><div class="skill-text">Node.js</div></div>
             <div class="skill-card"><div class="skill-text">Python</div></div>
-            <div class="skill-card"><div class="skill-text">MongoDB</div></div>
+            <div class="skill-card"><div class="skill-text">Javascript</div></div>
             <div class="skill-card"><div class="skill-text">HTML5</div></div>
             <div class="skill-card"><div class="skill-text">CSS3</div></div>
             <div class="skill-card"><div class="skill-text">Git</div></div>
+            <div class="skill-card"><div class="skill-text">MySQL</div></div>
+            <div class="skill-card"><div class="skill-text">Figma</div></div>
+            <div class="skill-card"><div class="skill-text">Framer</div></div>
           </div>
         </div>
-
-        <style>
-          .custom-skill-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            justify-items: center;
-            padding-top: 30px;
-          }
-
-          .skill-card {
-            width: 250px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-            cursor: default;
-            transition: transform 0.3s ease, background 0.5s ease,
-              border-color 0.5s ease;
-          }
-
-          .skill-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-              90deg,
-              transparent,
-              rgba(255, 255, 255, 0.1),
-              transparent
-            );
-            transition: left 0.5s ease;
-            z-index: 1;
-          }
-
-          .skill-card:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: #00ff88;
-          }
-
-          .skill-card:hover::before {
-            left: 100%;
-          }
-
-          .skill-text {
-            font-size: 20px;
-            font-weight: 600;
-            text-align: center;
-            color: #ffffff;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 2;
-          }
-
-          .skill-card:hover .skill-text {
-            color: #00ff88;
-            transform: scale(1.1);
-          }
-        </style>
       </section>
 
       <!--Social Bar-->
@@ -1183,12 +1129,12 @@
             <div class="username fade-in">
               <div class="follow-text">
                 <div class="rotating-text">
-                  <span>gitHub.com/</span>
-                  <span>instagram.com/</span>
-                  <span>x.com/</span>
-                  <span>linkedin.com/</span>
+                  <span>gitHub.com</span>
+                  <span>instagram.com</span>
+                  <span>x.com</span>
+                  <span>linkedin.com</span>
                 </div>
-                <span class="social-handle">@athulnath03</span>
+                <span class="social-handle">/athulnath03</span>
               </div>
             </div>
           </div>
@@ -1205,23 +1151,6 @@
     </footer>
 
     <script>
-      // Update local time
-      function updateTime() {
-        const now = new Date();
-        const timeString = now.toLocaleTimeString("en-US", {
-          timeZone: "Asia/Kolkata",
-          hour12: false,
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-        });
-        document.getElementById("local-time").textContent = timeString;
-      }
-
-      // Update time every second
-      setInterval(updateTime, 1000);
-      updateTime();
-
       // Scroll animations
       const observerOptions = {
         threshold: 0.1,
