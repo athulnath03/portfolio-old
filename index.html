@@ -592,18 +592,17 @@
 
               .follow-text {
                   display: flex;
-                  gap: 8px;
-                  
+                  gap:1px;
                   text-align: right;
                   height: 30px;
               }
 
               .rotating-text {
-                  height: 25px;
+                  height: 24px;
                   font-size: 1.1rem;
                   overflow: hidden;
                   position: relative;
-                  width: 110px;
+                  width: 150px;
               }
 
               .rotating-text span {
@@ -613,8 +612,9 @@
                   opacity: 0;
                   animation: rotateText 8s linear infinite;
                   color: #00ff88;
-                  text-align: center;
+                  text-align: right; /* ✅ ALIGN TEXT TO RIGHT */
               }
+
 
               .rotating-text span:nth-child(1) { animation-delay: 0s; }
               .rotating-text span:nth-child(2) { animation-delay: 2s; }
@@ -1195,9 +1195,9 @@
               <div class="follow-text">
                 <div class="rotating-text">
                   <span>gitHub.com/</span>
-                  <span>linkedin.com</span>
-                  <span>instagram.com</span>
+                  <span>instagram.com/</span>
                   <span>x.com/</span>
+                  <span>linkedin.com/</span>
                 </div>
                 <span class="social-handle">@athulnath03</span>
               </div>
