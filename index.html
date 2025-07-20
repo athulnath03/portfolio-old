@@ -499,7 +499,32 @@
       <section class="skills">
         <div class="container">
           <h2 class="section-title fade-in">Skills & Stacks</h2>
-          <div class="custom-skill-grid">
+          <div class="sphere-wrapper">
+            <div id="sphere"></div>
+
+              <!-- TagCloud library -->
+              <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+
+              <script>
+                const texts = [
+                  "JavaScript", "TypeScript", "HTML5", "CSS", "ReactJS", "Bootstrap", "GSAP",
+                  "Python", "MySQL", "Git", "Github",
+                  "Figma", "Framer",
+                  "Vibe Coding", "Web Design"
+                ];
+
+                const responsiveRadius = window.innerWidth < 768 ? 130 : 300;
+
+                TagCloud('#sphere', texts, {
+                  radius: responsiveRadius,
+                  maxSpeed: 'fast',
+                  initSpeed: 'fast',
+                  direction: 135,
+                  keep: true
+                });
+              </script>
+          
+<!--           <div class="custom-skill-grid">
             <div class="skill-card fade-in"><div class="skill-text">Javascript</div></div>
             <div class="skill-card fade-in"><div class="skill-text">HTML5</div></div>
             <div class="skill-card fade-in"><div class="skill-text">CSS3</div></div>
@@ -508,7 +533,7 @@
             <div class="skill-card fade-in"><div class="skill-text">MySQL</div></div>
             <div class="skill-card fade-in"><div class="skill-text">Figma</div></div>
             <div class="skill-card fade-in"><div class="skill-text">Framer</div></div>
-          </div>
+          </div> -->
         </div>
       </section>
 
