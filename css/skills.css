@@ -3,6 +3,44 @@
         padding: 60px;
         /* background: rgba(255, 255, 255, 0.02); */
       }
+/* --------------------------New Style---------------------- */
+      .sphere-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      #sphere {
+      color: #00ffb0;
+      font-size: clamp(12px, 2.5vw, 20px);
+      text-align: center;
+      line-height: 1.2;
+      user-select: none;
+    }
+
+    #sphere span {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid #00ffb0;
+      border-radius: 999px;
+      background: rgba(0, 191, 176, 0.08);
+      backdrop-filter: blur(3px);
+      margin: 4px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      will-change: transform;
+    }
+
+    #sphere span:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 255, 176, 0.4);
+    }
+
+    @media (max-width: 480px) {
+      #sphere span {
+        padding: 4px 10px;
+      }
+    }
       
 /*       .skill-category {
         background: rgba(255, 255, 255, 0.05);
