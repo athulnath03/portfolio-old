@@ -25,7 +25,6 @@
   .fade-card {
     position: relative;
     width: 100%;
-    max-width: 1200px;
     height: 200px;
     margin: 0 auto;
     overflow: hidden;
