@@ -4,7 +4,7 @@
         /* background: rgba(255, 255, 255, 0.02); */
       }
       
-      .skill-category {
+/*       .skill-category {
         background: rgba(255, 255, 255, 0.05);
         border-radius: 15px;
         padding: 30px;
@@ -88,4 +88,4 @@
       .skill-card:hover .skill-text {
         color: #00ff88;
         transform: scale(1.1);
-      }
+/*       } */ */
